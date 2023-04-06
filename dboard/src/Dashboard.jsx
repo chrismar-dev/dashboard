@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Dashboard.css";
+import CatBreedChart from "./CatBreedChart";
+import Chart from './Chart';
+
 function Dashboard() {
   const [cats, setCats] = useState([]);
   const [filteredCats, setFilteredCats] = useState([]);
@@ -89,6 +92,8 @@ function Dashboard() {
               <p>Life span: {cat.life_span} years</p>
               <p>Weight: {cat.weight.metric} kg</p>
               <p>{cat.description}</p>
+              <Chart />
+
             </li>
           ))}
         </ul>
